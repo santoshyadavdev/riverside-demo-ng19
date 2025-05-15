@@ -1,0 +1,20 @@
+/* ...existing styles... */
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+
+.user-card h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.user-card p {
+  margin: 8px 0;
+}

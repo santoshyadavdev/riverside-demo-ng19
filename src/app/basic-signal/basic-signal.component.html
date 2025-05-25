@@ -1,0 +1,15 @@
+<div>
+  <p>First Name: {{ firstNameCapitalized() }}</p>
+
+  <div>
+    <label for="firstNameInput">Update First Name: </label>
+    <input
+      id="firstNameInput"
+      type="text"
+      [value]="tempFirstName()"
+      (input)="onInputChange($event)"
+    />
+    <button (click)="updateFirstName()">Update</button>
+    <button (click)="stopLogging()">Stop Logging</button>
+  </div>
+</div>

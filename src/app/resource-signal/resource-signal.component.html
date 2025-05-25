@@ -1,0 +1,52 @@
+
+
+
+<div>
+    <h3>User Information</h3>
+    @if(userRxResource.isLoading()) {
+    <p>Loading user data...</p>
+    } @else if(userRxResource.error()) {
+    <p>Error loading user: {{ userRxResource.error() }}</p>
+    } @else {
+    <div class="user-card">
+        <p><strong>Status:</strong> {{ userRxResource.status() }}</p>
+
+        <!-- Debug the raw value -->
+        <pre>{{ userRxResource.value() | json }}</pre>
+
+        <h4>{{ userRxResource.value()?.name }}</h4>
+        <p><strong>Username:</strong> {{ userRxResource.value()?.username }}</p>
+        <p><strong>Email:</strong> {{ userRxResource.value()?.email }}</p>
+        <p><strong>ID:</strong> {{ userRxResource.value()?.id }}</p>
+    </div>
+    <button (click)="nextUser()">Next User</button>
+    <button (click)="reloadUser()">Reload User</button>
+    }
+</div>
+<!-- User Information Display -->
+<div>
+    <h3>User Information</h3>
+    @if(userResource.isLoading()) {
+    <p>Loading user data...</p>
+    } @else if(userResource.error()) {
+    <p>Error loading user: {{ userResource.error() }}</p>
+    } @else {
+    <div class="user-card">
+        <p><strong>Status:</strong> {{ userResource.status() }}</p>
+        
+        <!-- Debug the raw value -->
+        <pre>{{ userResource.value() | json }}</pre>
+        
+        <h4>{{ userResource.value()?.name }}</h4>
+        <p><strong>Username:</strong> {{ userResource.value()?.username }}</p>
+        <p><strong>Email:</strong> {{ userResource.value()?.email }}</p>
+        <p><strong>ID:</strong> {{ userResource.value()?.id }}</p>
+    </div>
+    <button (click)="nextUser()">Next User</button>
+        <button (click)="reloadUser()">Reload User</button>
+    }
+</div>
+
+
+
+

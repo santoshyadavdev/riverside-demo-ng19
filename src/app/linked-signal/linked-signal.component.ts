@@ -10,6 +10,8 @@ export class LinkedSignalComponent {
   // New signals for dropdown
   dropdownValues = signal(['Option 1', 'Option 2', 'Option 3']);
   selectedValue = linkedSignal(() => this.dropdownValues()[0]);
+  // selectedValue = signal(this.dropdownValues()[0]);
+
 
   onDropdownChange(event: Event): void {
     const select = event.target as HTMLSelectElement;

@@ -10,7 +10,7 @@ import { TodoTableComponent } from '../todo-table/todo-table.component';
   styleUrl: './http-resource.component.css',
 })
 export class HttpResourceComponent {
-  todoList = httpResource<Todo[]>(
-    () => `https://jsonplaceholder.typicode.com/todos`
+  todoList = httpResource<Todo[]>(    
+    () => `https://jsonplaceholder.typicode.com/todos`,
   );
 }

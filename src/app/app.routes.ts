@@ -28,6 +28,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'service-demo',
+    loadComponent: () =>
+      import('./service-demo/service-demo.component').then(
+        (m) => m.ServiceDemoComponent
+      ),
+  },
+  {
     path: 'basic-signal',
     loadComponent: () =>
       import('./basic-signal/basic-signal.component').then(
